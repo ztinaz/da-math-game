@@ -14,7 +14,7 @@
   			  <com.google.ads.AdView android:id="@+id/adView"
                          android:layout_width="wrap_content"
                          android:layout_height="wrap_content"
-                         ads:adUnitId="a14e6aca79cda00"
+                         ads:adUnitId="000011112222"
                          ads:adSize="BANNER"
                          ads:loadAdOnCreate="true"/>
 		</LinearLayout>
