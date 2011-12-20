@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/dmg_help"
+    	  android:icon="@drawable/menuhelp"
+    	  android:layout_height="58px"
+          android:title="Help" />
+    <item android:id="@+id/dmg_about"
+    	  android:icon="@drawable/menuabout"
+    	  android:layout_height="58px"
+    	  android:title="About DMG"/>
+</menu>

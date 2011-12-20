@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/relativeStats"
+    android:layout_width="fill_parent"
+    android:background="@drawable/background"
+    android:layout_height="fill_parent">
+    
+	<LinearLayout 
+		android:layout_below="@+id/tvNumQuestions"
+		android:id="@+id/chart" 
+		android:layout_marginTop="70dip"
+		android:orientation="horizontal" 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"/>
+    	
+	    <TextView android:id="@+id/tvNumQuestions"
+	    	android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:textSize="15dip"
+	    	android:typeface="serif"
+       		android:textColor="#FF9900"
+	    	android:text="Number of Questions: "
+	    	android:paddingTop="10dip"/>
+    
+	     <TextView android:id="@+id/tvNumCorrect"
+	    	android:layout_below="@+id/tvNumQuestions"
+	    	android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:textSize="15dip"
+	    	android:typeface="serif"
+	       	android:textColor="#FF9900"
+	    	android:text="Correct Answers: "
+	    	android:paddingTop="5dip"/>
+    	
+	     <TextView android:id="@+id/tvNumWrong"
+	    	android:layout_below="@+id/tvNumCorrect"
+	    	android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:textSize="15dip"
+	    	android:typeface="serif"
+	       	android:textColor="#FF9900"
+	    	android:text="Wrong Answers: "
+	    	android:paddingTop="5dip"/>
+    	
+    	
+	     <TextView android:id="@+id/tvCorrectPerc"
+	    	android:layout_below="@+id/tvNumWrong"
+	    	android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:textSize="15dip"
+	    	android:typeface="serif"
+	       	android:textColor="#FF9900"
+	    	android:text="Correct Percentage: "
+	    	android:paddingTop="5dip"/>
+    	 
+    <ImageButton android:id="@+id/btnHistory"
+    	android:layout_alignParentBottom="true"
+    	android:layout_alignParentRight="true"
+    	android:src="@drawable/stats_ico"
+    	android:layout_width="wrap_content"
+    	android:onClick="statshistory"
+    	android:layout_height="wrap_content"/>
+    	
+    <ImageButton android:id="@+id/btnMain"
+    	android:src="@drawable/back_ico"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:onClick="backtomain"
+    	android:layout_alignParentBottom="true"
+    	android:layout_alignParentLeft="true"/>
+    
+</RelativeLayout>

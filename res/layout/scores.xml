@@ -1,0 +1,189 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/relativeMain"
+    android:layout_width="fill_parent"
+    android:background="@drawable/background"
+    android:layout_height="fill_parent">
+    
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:id="@+id/adLayout"
+              android:layout_height="wrap_content">
+  			  <com.google.ads.AdView android:id="@+id/adView"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         ads:adUnitId="a14e6aca79cda00"
+                         ads:adSize="BANNER"
+                         ads:loadAdOnCreate="true"/>
+		</LinearLayout>
+    
+    <TextView
+       	android:id="@+id/tvName"
+       	android:layout_width="fill_parent"
+       	android:layout_below="@+id/adLayout"
+       	android:layout_height="40dip"
+       	android:paddingLeft="5dip"
+       	android:paddingTop="5dip"
+       	android:typeface="serif"
+       	android:textColor="#FF9900"
+       	android:text="Your Scores"
+       	android:textSize="20dip"/>
+       	
+    <RelativeLayout android:id="@+id/buttonrow"
+    	android:layout_width="fill_parent"
+    	android:layout_below="@+id/tvName"
+    	android:layout_height="wrap_content">
+    	
+	    <ImageButton
+	    	android:id="@+id/easy"
+	    	android:layout_below="@+id/lblDifficulty"
+	    	android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:layout_toLeftOf="@+id/normal"
+	    	android:onClick="setEasy"
+	    	android:src="@drawable/easy_med"/>
+	    	
+	    <ImageButton
+	    	android:id="@+id/normal"
+	    	android:layout_below="@+id/lblDifficulty"
+	    	android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:layout_centerInParent="true"
+	    	android:onClick="setNormal"
+	    	android:src="@drawable/normal_med"/>
+	    	
+	    <ImageButton
+	    	android:id="@+id/hard"
+	    	android:layout_below="@+id/lblDifficulty"
+	    	android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:layout_toRightOf="@+id/normal"
+	    	android:onClick="setHard"
+	    	android:src="@drawable/hard_med"/>	
+    </RelativeLayout> 
+    
+    <RelativeLayout android:id="@+id/buttonrow1"	
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:gravity="center"
+    	android:paddingTop="10dip"
+    	android:visibility="invisible"
+    	android:layout_below="@+id/buttonrow">
+    	
+    	<ImageButton android:id="@+id/add"
+    		android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:onClick="setAdd"
+    		android:src="@drawable/add_ico"/>
+    		
+    	<ImageButton android:id="@+id/subtract"
+    		android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:onClick="setSub"
+    		android:layout_toRightOf="@+id/add"
+    		android:src="@drawable/minus_ico"/>
+    	
+    	<ImageButton android:id="@+id/multiply"
+    		android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:onClick="setMul"
+    		android:layout_toRightOf="@+id/subtract"
+    		android:src="@drawable/multiply_ico"/>
+    		
+    	<ImageButton android:id="@+id/divide"
+    		android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:onClick="setDiv"
+    		android:layout_toRightOf="@+id/multiply"
+    		android:src="@drawable/divide_ico"/>
+    </RelativeLayout>
+    
+    <RelativeLayout android:id="@+id/statsrow"	
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:gravity="center"
+    	android:paddingTop="10dip"
+    	android:paddingLeft="5dip"
+    	android:layout_below="@+id/tvName"
+    	android:visibility="invisible">
+    	
+    	<TextView android:id="@+id/tvoperation"
+    		android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:typeface="serif"
+       		android:textColor="#FF9900"
+       		android:text="Operation: "
+       		android:textSize="20dip"/>
+       		
+       	<TextView android:id="@+id/tvdifficulty"
+    		android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:typeface="serif"
+       		android:textColor="#FF9900"
+       		android:text="Difficulty: "
+       		android:layout_below="@+id/tvoperation"
+       		android:textSize="20dip"/>
+    	
+    	<TextView android:id="@+id/tvtotal"
+    		android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:typeface="serif"
+       		android:textColor="#FF9900"
+       		android:text="Total Questions: 00"
+       		android:layout_below="@+id/tvdifficulty"
+       		android:textSize="20dip"/>
+       		
+       	<TextView android:id="@+id/tvcorrect"
+    		android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:typeface="serif"
+       		android:textColor="#FF9900"
+       		android:text="Total Correct: 00"
+       		android:layout_below="@+id/tvtotal"
+       		android:textSize="20dip"/>
+    	
+    	<TextView android:id="@+id/tvwrong"
+    		android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:typeface="serif"
+       		android:textColor="#FF9900"
+       		android:text="Total Wrong: 00"
+       		android:layout_below="@+id/tvcorrect"
+       		android:textSize="20dip"/>
+       		
+       	<TextView android:id="@+id/tvperc"
+    		android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:typeface="serif"
+       		android:textColor="#FF9900"
+       		android:text="Percent Correct: 00"
+       		android:layout_below="@+id/tvwrong"
+       		android:textSize="20dip"/>
+       		
+       		
+       	
+       		
+       	<ImageButton android:id="@+id/btnback"
+       		android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:onClick="goback"
+    		android:layout_alignParentBottom="true"
+    		android:layout_alignParentLeft="true"
+    		android:src="@drawable/back_ico"/>
+    		
+    	<ImageButton android:id="@+id/btnMain"
+    		android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:onClick="gostats"
+    		android:layout_alignParentBottom="true"
+    		android:layout_alignParentRight="true"
+    		android:src="@drawable/stats_ico"/>
+    	
+    	
+    </RelativeLayout>
+    
+    
+    
+</RelativeLayout>

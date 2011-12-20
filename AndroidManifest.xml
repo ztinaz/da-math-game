@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.games.dmg"
+      android:versionCode="2" android:versionName="1.1">
+    <uses-sdk android:minSdkVersion="8" />
+    
+    <uses-permission android:name="android.permission.INTERNET"/>
+  	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+        <activity android:name=".DMG"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".vSplash"
+        		  android:theme="@style/Theme.Transparent"
+        		  android:clearTaskOnLaunch="true">
+        	<intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="android.intent.category.LAUNCHER"></category>
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".vTestSession"
+                  android:label="@string/app_name">
+        </activity>
+        
+        <activity android:name=".vStats"
+                  android:label="@string/app_name">
+        </activity>
+        
+        <activity android:name=".vHistoryStats"
+                  android:label="@string/app_name">
+        </activity>
+        
+        <activity android:name=".vEasystats"
+                  android:label="@string/app_name">
+        </activity>
+        
+        <activity android:name=".vNormalstats"
+                  android:label="@string/app_name">
+        </activity>
+        
+        <activity android:name=".vHardstats"
+                  android:label="@string/app_name">
+        </activity>
+        
+        <activity android:name="com.google.ads.AdActivity"
+              android:configChanges="keyboard|keyboardHidden|orientation"/>
+        
+		<receiver android:name="MyIntentReceiver" android:enabled="true">
+			<intent-filter>
+				<action android:name="com.games.dmg.PrepareOperationSet" />
+			</intent-filter>
+		</receiver>
+        
+    </application>
+</manifest>

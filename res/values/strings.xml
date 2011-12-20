@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, DMG!</string>
+    <string name="app_name">DA Math Game</string>
+    
+    <string name="difficulty_prompt">Choose difficulty level</string>
+    <string-array name="difficulty_array">
+        <item>Easy</item>
+        <item>Normal</item>
+        <item>Hard</item>
+    </string-array>
+    
+    <string name="operation_prompt">Select operation type</string>
+    <string-array name="operation_array">
+        <item>Add (+)</item>
+        <item>Subtract (-)</item>
+        <item>Multiply (x)</item>
+        <item>Divide (/)</item>
+    </string-array>
+    
+    <string name="numquestions_prompt">Select number of questions</string>
+    <string-array name="numquestions_array">
+        <item>5</item>
+        <item>10</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+        <item>35</item>
+    </string-array>
+</resources>
