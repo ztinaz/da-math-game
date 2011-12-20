@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/relativeMain"
+    android:layout_width="fill_parent"
+    android:background="@drawable/background"
+    android:layout_height="fill_parent">
+    
+    <TextView
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:id="@+id/lblDifficulty"
+    	android:text="Select Game Difficulty"
+    	android:paddingBottom="10dip"
+    	android:paddingTop="10dip"
+    	android:textColor="#f69e08"
+    	android:textStyle="bold"
+    	android:gravity="center"
+    	android:textSize="18dip"/>
+    	
+    <RelativeLayout android:id="@+id/buttonrow"
+    	android:layout_width="fill_parent"
+    	android:layout_below="@+id/lblDifficulty"
+    	android:layout_height="wrap_content">
+    	
+	    <ImageButton
+	    	android:id="@+id/easy"
+	    	android:layout_below="@+id/lblDifficulty"
+	    	android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:layout_toLeftOf="@+id/normal"
+	    	android:onClick="setEasy"
+	    	android:src="@drawable/easy"/>
+	    	
+	    <ImageButton
+	    	android:id="@+id/normal"
+	    	android:layout_below="@+id/lblDifficulty"
+	    	android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:layout_centerInParent="true"
+	    	android:onClick="setNormal"
+	    	android:src="@drawable/normal"/>
+	    	
+	    <ImageButton
+	    	android:id="@+id/hard"
+	    	android:layout_below="@+id/lblDifficulty"
+	    	android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:layout_toRightOf="@+id/normal"
+	    	android:onClick="setHard"
+	    	android:src="@drawable/hard"/>	
+    </RelativeLayout>
+    	
+
+   	<TextView
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:id="@+id/lblNumQuestions"
+    	android:paddingTop="10dip"
+    	android:text="Number of Questions"
+    	android:paddingBottom="10dip"
+    	android:layout_below="@+id/buttonrow"
+    	android:textColor="#f69e08"
+    	android:textStyle="bold"
+    	android:gravity="center"
+    	android:textSize="18dip"/>
+    	
+    	
+    <RelativeLayout android:id="@+id/spinnerrow"	
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:gravity="center"
+    	android:layout_below="@+id/lblNumQuestions">
+    	
+	    <Spinner android:layout_width="200dip" 
+	    	android:id="@+id/spNumQuestions" 
+	    	android:layout_height="wrap_content"
+	    	android:layout_below="@+id/lblNumQuestions"
+	    	android:prompt="@string/numquestions_prompt"
+	    	android:gravity="center"
+	    	android:layout_alignParentLeft="true"/>
+    	
+    </RelativeLayout>
+    	
+    <RelativeLayout android:id="@+id/buttonrow1"	
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:gravity="center"
+    	android:paddingTop="10dip"
+    	android:layout_below="@+id/spinnerrow">
+    	
+    	<ImageButton android:id="@+id/add"
+    		android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:onClick="addClicked"
+    		android:src="@drawable/add"/>
+    		
+    	<ImageButton android:id="@+id/subtract"
+    		android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:onClick="subClicked"
+    		android:layout_toRightOf="@+id/add"
+    		android:src="@drawable/minus"/>
+    	
+    	<ImageButton android:id="@+id/multiply"
+    		android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:onClick="mulClicked"
+    		android:layout_toRightOf="@+id/subtract"
+    		android:src="@drawable/multiply"/>
+    		
+    	<ImageButton android:id="@+id/divide"
+    		android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:onClick="divClicked"
+    		android:layout_toRightOf="@+id/multiply"
+    		android:src="@drawable/divide"/>	
+    	
+    </RelativeLayout>
+    
+    <RelativeLayout android:id="@+id/buttonrow2"	
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:gravity="center"
+    	android:paddingTop="10dip"
+    	android:layout_below="@+id/buttonrow1">
+    	
+    	<ImageButton android:id="@+id/timed"
+    		android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:onClick="setTimed"
+    		android:src="@drawable/timed"/>
+    	
+    	<ImageButton android:id="@+id/nottimed"
+    		android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:layout_toRightOf="@+id/timed"
+    		android:onClick="setUntimed"
+    		android:src="@drawable/nottimed"/>
+    	
+    </RelativeLayout>
+    	
+    	
+     <RelativeLayout android:id="@+id/buttonrow3"	
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:paddingTop="10dip"
+    	android:layout_alignParentBottom="true"
+    	android:layout_below="@+id/buttonrow2">
+    		
+    	<ImageButton
+    		android:id="@+id/stats"
+    		android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:src="@drawable/stats_ico"
+    		android:layout_alignParentLeft="true"
+    		android:layout_alignParentBottom="true"
+    		android:onClick="showStats"/>
+    		
+    	<ImageButton
+    		android:id="@+id/btnStart"	
+    		android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:src="@drawable/play_ico"
+    		android:onClick="startTest"
+    		android:layout_alignParentRight="true"
+    		android:layout_alignParentBottom="true"
+    		android:visibility="invisible"/>
+
+     </RelativeLayout>
+    
+	
+</RelativeLayout>

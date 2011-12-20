@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+	<TextView android:id="@+id/tvAppname"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:paddingLeft="5dip"
+		android:paddingBottom="10dip"
+		android:text="Application Name: Da Math Game"/>
+		
+	<TextView android:id="@+id/tvAppversion"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:paddingLeft="5dip"
+		android:paddingBottom="10dip"
+		android:layout_below="@+id/tvAppname"
+		android:text="Application Version: 1.0"/>
+		
+	<TextView android:id="@+id/tvOSversion"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:paddingLeft="5dip"
+		android:paddingBottom="10dip"
+		android:layout_below="@+id/tvAppversion"
+		android:text="Designed for: Android 2.2/2.3"/>
+		
+	<TextView android:id="@+id/tvReportBug"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:paddingLeft="5dip"
+		android:paddingBottom="10dip"
+		android:layout_below="@+id/tvOSversion"
+		android:text="Send Bug Reports to: bugs@damathgame.com"/>
+		
+	<TextView android:id="@+id/tvReleaseDate"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:paddingLeft="5dip"
+		android:paddingBottom="10dip"
+		android:layout_below="@+id/tvReportBug"
+		android:text="Released on Sep/01/2011"/>
+	
+</RelativeLayout>

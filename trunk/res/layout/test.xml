@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/relativeTest"
+    android:background="@drawable/background"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    
+    <RelativeLayout android:id="@+id/statusrow"
+    	android:gravity="center"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content">
+    	
+ 
+ 	<ImageView android:id="@+id/ivDifficulty"
+ 		android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:paddingRight="10dip"
+    	android:paddingTop="5dip"
+    	android:src="@drawable/easy_ico"/>
+    	
+    <ImageView android:id="@+id/ivTimed"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:paddingRight="10dip"
+    	android:paddingTop="5dip"
+    	android:layout_toRightOf="@+id/ivDifficulty"
+    	android:src="@drawable/timed_ico"/>
+    
+    <ImageView android:id="@+id/ivOperation"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:paddingRight="10dip"
+    	android:paddingTop="5dip"
+    	android:layout_toRightOf="@+id/ivTimed"
+    	android:src="@drawable/add_ico"/>
+    
+  
+    <ImageView android:id="@+id/ivCorrect"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:paddingRight="10dip"
+    	android:paddingTop="5dip"
+    	android:layout_toRightOf="@+id/ivOperation"
+    	android:src="@drawable/correct"/>
+	
+    <TextView android:id="@+id/tvCorrect"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:text="00"
+    	android:paddingRight="10dip"
+    	android:textColor="#f69e08"
+    	android:layout_toRightOf="@+id/ivCorrect"
+    	android:textSize="30dip"/>
+    	
+    <ImageView android:id="@+id/ivWrong"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:paddingRight="10dip"
+    	android:paddingTop="5dip"
+    	android:layout_toRightOf="@+id/tvCorrect"
+    	android:src="@drawable/wrong"/>
+    	
+    <TextView android:id="@+id/tvWrong"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:text="00"
+    	android:textColor="#f69e08"
+    	android:layout_toRightOf="@+id/ivWrong"
+    	android:textSize="30dip"/>
+    	
+    </RelativeLayout>	
+    	
+    <RelativeLayout android:id="@+id/operand1row"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:layout_below="@+id/statusrow"
+    	android:gravity="center">
+    	
+    	<TextView android:id="@+id/tvspacer1"
+    		android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:visibility="invisible"
+	    	android:text="+"/>
+    
+    	<TextView android:id="@+id/tvOperand1"
+	    	android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:text="178"
+	    	android:paddingTop="20dip"
+	    	android:textColor="#f69e08"
+	    	android:paddingBottom="10dip"
+			android:layout_toRightOf="@+id/tvspacer1"
+	    	android:textSize="36dip"/>	
+    </RelativeLayout>
+    	
+    <RelativeLayout android:id="@+id/operand2row"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:layout_below="@+id/operand1row"
+    	android:gravity="center">
+    	
+    	<TextView android:id="@+id/tvOperation"
+    		android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:text=""
+	    	android:textColor="#f69e08"
+	    	android:textSize="36dip"/>
+    	
+	    <TextView android:id="@+id/tvOperand2"
+	    	android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:text="90"
+	    	android:layout_toRightOf="@+id/tvOperation"
+	    	android:textColor="#f69e08"
+	    	android:textSize="36dip"/>
+    	
+    </RelativeLayout>
+   
+     <TextView android:id="@+id/tvHorz"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:text="-----------"
+    	android:gravity="center"
+    	android:layout_below="@+id/operand2row"
+    	android:textSize="36dip"/>
+    	
+    	<TableLayout android:id="@+id/tablelayout"
+    		android:layout_width="fill_parent"
+    		android:layout_height="fill_parent"
+    		android:layout_below="@+id/tvHorz">
+    		
+    		<TableRow android:id="@+id/tvRow1"
+    			android:gravity="center_horizontal">
+
+			   	<Button android:id="@+id/answer1"
+			   		android:layout_width="120dip"
+			   		android:layout_height="wrap_content"
+			   		android:text="178"
+			   		android:paddingBottom="10dip"
+			   		android:layout_below="@+id/tvHorz"
+			   		android:gravity="center"
+			   		android:onClick="ans1clicked"
+			   		android:textSize="24dip"/>
+			   		
+			   	<Button android:id="@+id/answer2"
+			   		android:layout_width="120dip"
+			   		android:layout_height="wrap_content"
+			   		android:text="90"
+			   		android:paddingBottom="10dip"
+			   		android:layout_below="@+id/tvHorz"
+			   		android:layout_toRightOf="@id/answer1"
+			   		android:onClick="ans2clicked"
+			   		android:gravity="center"
+			   		android:textSize="24dip"/>
+			   		
+			</TableRow>
+   		
+   	<TableRow android:id="@+id/tvRow2"
+   			android:paddingTop="20dip"
+   			android:gravity="center_horizontal">
+   	
+		   	<Button android:id="@+id/answer3"
+		   		android:layout_width="120dip"
+		   		android:layout_height="wrap_content"
+		   		android:text="290"
+		   		android:layout_below="@+id/answer1"
+		   		android:onClick="ans3clicked"
+		   		android:textSize="24dip"/>
+		   		
+		   	<Button android:id="@+id/answer4"
+		   		android:layout_width="120dip"
+		   		android:layout_height="wrap_content"
+		   		android:text="340"
+		   		android:layout_below="@+id/answer1"
+		   		android:layout_toRightOf="@+id/answer3"
+		   		android:onClick="ans4clicked"
+		   		android:textSize="24dip"/>
+   		
+   		</TableRow>
+   		
+   		<TableRow android:id="@+id/tvRow3"
+   			android:paddingTop="20dip"
+   			android:gravity="center_horizontal">
+   		
+   			<ProgressBar android:layout_height="wrap_content" 
+		   		android:layout_width="wrap_content"
+		   		android:max="100"
+		   		style="@android:style/Widget.ProgressBar.Horizontal"
+		   		android:id="@+id/pbTimer"/>			
+   			
+   		</TableRow>
+   		
+   	</TableLayout>
+   
+
+   	<ImageButton android:id="@+id/quit"
+   		android:layout_width="fill_parent"
+   		android:layout_height="wrap_content"
+   		android:src="@drawable/exit"
+   		android:onClick="quittest"
+   		android:gravity="right"
+   		android:layout_alignParentBottom="true"/>    
+    
+</RelativeLayout>
